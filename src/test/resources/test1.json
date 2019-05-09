@@ -1,0 +1,10 @@
+{
+    "input": [{
+            "product": {},
+            "quantity": 1,
+            "category": "BOOKS"
+        }
+    ],
+    "output": {
+    }
+}
