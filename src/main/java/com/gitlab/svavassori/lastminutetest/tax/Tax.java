@@ -49,17 +49,6 @@ public class Tax {
     }
     
     /**
-     * Rounds the given price (in cents) to the nearest 0.05 (so nearest 5).
-     * 
-     * @param price the price to round, in cents
-     * @return the rounded price, in cents
-     */
-    public static int roundToNearest(int price) {
-        
-        return (int) (Math.round(price / 5.0) * 5);
-    }
-    
-    /**
      * @return the tax rate applied, in percents
      */
     public int rate() {

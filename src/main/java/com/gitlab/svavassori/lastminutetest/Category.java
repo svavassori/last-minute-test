@@ -12,5 +12,26 @@ public enum Category {
     BOOKS,
     FOOD,
     MEDICAL,
-    OTHER
+    OTHER;
+    
+    public static Category findCategory(String name) {
+        
+        // this is an heuristic
+        Category category = Category.OTHER;
+        
+        if (name.contains("book")) {
+            
+            category = Category.BOOKS;
+            
+        } else if (name.contains("chocolate")) {
+            
+            category = Category.FOOD;
+            
+        } else if (name.contains("headache")) {
+            
+            category = Category.MEDICAL;
+        }
+        
+        return category;
+    }
 }
