@@ -9,7 +9,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>1.11</source>
                     <target>1.11</target>
@@ -17,7 +17,25 @@
                     <release>11</release>
                 </configuration>
             </plugin>
-        </plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${surefire-failsafe.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<version>${surefire-failsafe.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+        </plugins>        
     </build>
     
     <dependencies>
@@ -40,23 +58,17 @@
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-<!--         <dependency> -->
-<!--             <groupId>org.junit.vintage</groupId> -->
-<!--             <artifactId>junit-vintage-engine</artifactId> -->
-<!--             <version>${junit.jupiter.version}</version> -->
-<!--             <scope>test</scope> -->
-<!--         </dependency> -->
         
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>2.23.0</version>
+            <version>2.27.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.11.1</version>
+            <version>3.12.2</version>
             <scope>test</scope>
         </dependency>
     
@@ -65,6 +77,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <junit.jupiter.version>5.3.1</junit.jupiter.version>
+        <surefire-failsafe.version>2.22.2</surefire-failsafe.version>
+        <junit.jupiter.version>5.4.2</junit.jupiter.version>
     </properties>
 </project>
