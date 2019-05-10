@@ -1,8 +1,4 @@
-/**
- *
- * Copyright (C) 2019 Deveryware S.A. All Rights Reserved.
- * 
- */
+
 package com.gitlab.svavassori.lastminutetest.tax;
 
 import static com.gitlab.svavassori.lastminutetest.Category.BOOKS;

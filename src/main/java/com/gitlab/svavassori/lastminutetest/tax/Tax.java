@@ -47,12 +47,4 @@ public class Tax {
         
         return taxes;
     }
-    
-    /**
-     * @return the tax rate applied, in percents
-     */
-    public int rate() {
-        
-        return rate;
-    }
 }
