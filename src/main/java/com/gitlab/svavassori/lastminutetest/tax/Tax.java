@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 
 
 /**
- * This class represents the tax over all imported goods.
+ * This class represents the com.gitlab.svavassori.lastminutetest.tax over all imported goods.
  * 
  * @author sergio
  */
@@ -21,8 +21,8 @@ public class Tax {
      * Construct an immutable instance of Tax with the given rate to be applied
      * to the given categories.
      * 
-     * @param rate the tax rate to apply, in percentage
-     * @param taxCondition the condition under which apply the tax
+     * @param rate the com.gitlab.svavassori.lastminutetest.tax rate to apply, in percentage
+     * @param taxCondition the condition under which apply the com.gitlab.svavassori.lastminutetest.tax
      */
     public Tax(int rate, Predicate<Item> taxCondition) {
         
@@ -31,7 +31,7 @@ public class Tax {
     }
     
     /**
-     * @param item the {@link Item} over which calculate the tax
+     * @param item the {@link Item} over which calculate the com.gitlab.svavassori.lastminutetest.tax
      * @return the rate applied for the given item, in cents
      */
     public int tax(Item item) {

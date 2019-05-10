@@ -1,5 +1,5 @@
 
-package tax;
+package com.gitlab.svavassori.lastminutetest.tax;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
